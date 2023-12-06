@@ -4,6 +4,9 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
+const index = require('./backend/index'); // Import the index module
+const router = require('./backend/routes/router'); // Import the router module
+
 const app = express();
 
 const port = 5050;
@@ -16,11 +19,10 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+app.use('/', index); // Use the index module
+app.use('/', router); // Use the router module
+
 
 app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`);

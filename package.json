@@ -2,6 +2,7 @@
   "name": "ielts_v2",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://localhost:5050/dashboards/",
   "description": "IELTS_APP",
   "main": "app.js",
   "keywords": [
@@ -33,13 +34,14 @@
     "react-scripts": "^5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node app.js",
+    "start-react": "react-scripts start", 
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start-backend": "node ./backend/index.js"
   },
-  "proxy": "http://localhost:5050",
+  "proxy": "http://localhost:5050/dashboards/",
   "eslintConfig": {
     "extends": [
       "react-app",

@@ -7,7 +7,7 @@
 const express = require('express');
 const app = express();
 const debug = require('debug')('bangkit-ielts-cloud:server');
-const http = require('http');
+const path = require('path'); // Import the path module
 const router = require('./routes/router'); 
 
 /**
@@ -18,29 +18,14 @@ const port = normalizePort(process.env.PORT || '5050');
 app.set('port', port);
 
 /**
- * Create HTTP server.
- */
-
-const server = http.createServer(app);
-
-/**
  * Point to React app build directory
  */
 
 app.use('/', router);
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../build', 'index.html'));
+    res.sendFile(path.join(__dirname, '../../src', 'frontpage.html'));
 });
-
-/**
- * Listen on provided port, on all network interfaces.
- */
-
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
-
 
 /**
  * Normalize a port into a number, string, or false.
@@ -95,9 +80,11 @@ function onError(error) {
  */
 
 function onListening() {
-    const addr = server.address();
+    const addr = app.address();
     const bind = typeof addr === 'string'
         ? 'pipe ' + addr
         : 'port ' + addr.port;
     debug('Listening on ' + bind);
 }
+
+module.exports = app; // Export the Express app instance
