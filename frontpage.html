@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnglishBuddy - IELTS Learning App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero-background {
+            background: linear-gradient(to right, #667eea, #764ba2);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-100">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-gradient-to-r from-blue-500 to-purple-600 p-4 text-white shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold tracking-wide transform transition duration-300 hover:scale-105">EnglishBuddy</a>
+            <div class="flex items-center">
+                <a id="dashboardBtn" href="/dashboards/" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded transition duration-300 mr-4">
+                    Dashboard
+                </a>
+                <button id="adminLoginBtn" class="bg-white hover:bg-gray-100 text-purple-700 font-bold py-2 px-4 rounded transition duration-300 shadow">
+                    Admin Login
+                </button>
+            </div>
+        </div>
+    </nav>    
+
+    <!-- Hero Section -->
+    <div class="hero-background text-white text-center py-20 fade-in">
+        <h1 class="text-5xl font-bold mb-6">Master IELTS with EnglishBuddy</h1>
+        <p class="text-xl mx-auto leading-relaxed max-w-xl">
+            Join our community of learners and achieve your dreams with personalized IELTS preparation.
+        </p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto my-10 px-4">
+        <!-- Introduction Section -->
+        <section class="mb-10 text-center">
+            <h2 class="text-3xl font-bold mb-6">Why Choose EnglishBuddy?</h2>
+            <p class="text-lg mx-auto max-w-2xl">
+                EnglishBuddy offers a comprehensive approach to mastering the IELTS exam with personalized learning, expert instructors, and a supportive community.
+            </p>
+        </section>
+
+        <!-- Features Section -->
+        <section class="mb-10">
+            <h3 class="text-2xl font-bold text-center mb-6">Our Features</h3>
+            <div class="flex flex-col md:flex-row font-sans">
+                <!-- Feature 1 -->
+                <div class="flex-auto p-6 border-b md:border-r md:border-b-0 border-slate-200">
+                    <div class="flex flex-wrap">
+                        <h1 class="flex-auto text-xl font-medium text-slate-900">
+                            Personalized Study Plans
+                        </h1>
+                        <div class="text-sm font-medium text-slate-400">
+                            Tailored Learning
+                        </div>
+                    </div>
+                    <p class="mt-4 text-sm text-slate-500">
+                        Customized learning paths tailored to your strengths and weaknesses, ensuring efficient study and faster progress.
+                    </p>
+                </div>
+            
+                <!-- Feature 2 -->
+                <div class="flex-auto p-6 border-b md:border-r md:border-b-0 border-slate-200">
+                    <div class="flex flex-wrap">
+                        <h1 class="flex-auto text-xl font-medium text-slate-900">
+                            Expert Instructors
+                        </h1>
+                        <div class="text-sm font-medium text-slate-400">
+                            Professional Guidance
+                        </div>
+                    </div>
+                    <p class="mt-4 text-sm text-slate-500">
+                        Learn from experienced IELTS educators who provide guidance, feedback, and strategies to excel in the exam.
+                    </p>
+                </div>
+            
+                <!-- Feature 3 -->
+                <div class="flex-auto p-6">
+                    <div class="flex flex-wrap">
+                        <h1 class="flex-auto text-xl font-medium text-slate-900">
+                            Interactive Learning Tools
+                        </h1>
+                        <div class="text-sm font-medium text-slate-400">
+                            Engaging Resources
+                        </div>
+                    </div>
+                    <p class="mt-4 text-sm text-slate-500">
+                        Engage with interactive lessons, practice tests, and real-time quizzes to reinforce your learning and build confidence.
+                    </p>
+                </div>
+            </div>    
+            
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="mb-10">
+            <h3 class="text-2xl font-bold text-center mb-6">Success Stories</h3>
+            <div class="flex flex-wrap justify-center gap-6">
+                <!-- Testimonial 1 -->
+                <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300 w-full md:w-1/2">
+                    <blockquote class="italic">"Thanks to EnglishBuddy, I achieved a band score of 8.0! The personalized coaching and practice tests were game changers for me."</blockquote>
+                    <p class="mt-4 font-bold">- Alex Johnson</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300 w-full md:w-1/2">
+                    <blockquote class="italic">"The interactive tools and supportive community made learning enjoyable. I highly recommend EnglishBuddy to anyone aiming for a high IELTS score."</blockquote>
+                    <p class="mt-4 font-bold">- Maria Gonzalez</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="text-center py-10 hero-background text-white rounded-lg">
+            <h3 class="text-2xl font-bold mb-4">Start Your IELTS Journey Today!</h3>
+            <p class="mb-6">Join our community and get access to the best resources for IELTS preparation.</p>
+            <button class="bg-white text-purple-700 font-bold py-2 px-6 rounded hover:bg-gray-100 transition duration-300">Get Started</button>
+        </section>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-blue-600 to-purple-700 text-white text-center p-6 fade-in">
+        <div class="container mx-auto">
+            <div class="mb-4">
+                <a href="#" class="text-2xl font-bold hover:text-blue-200 transition duration-300">EnglishBuddy</a>
+            </div>
+            <div class="mb-4">
+                <p>Explore, Learn, and Conquer IELTS</p>
+            </div>
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="#" class="hover:text-blue-200 transition duration-300">Home</a>
+                <a href="#" class="hover:text-blue-200 transition duration-300">About</a>
+                <a href="#" class="hover:text-blue-200 transition duration-300">Services</a>
+                <a href="#" class="hover:text-blue-200 transition duration-300">Contact</a>
+            </div>
+            <div>
+                <p>© 2023 EnglishBuddy - All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+    
+
+</body>
+</html>
