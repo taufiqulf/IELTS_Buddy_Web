@@ -60,9 +60,6 @@ function App() {
             </main>
             <footer className="bg-blue-700 text-white text-center p-4 flex flex-col items-center">
                 <p>IELTS Learning App © 2023</p>
-                <a href="#admin-login" className="text-white underline mt-2">
-                    Admin Login
-                </a>
             </footer>
         </div>
     );
