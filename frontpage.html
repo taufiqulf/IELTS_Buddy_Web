@@ -1,169 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EnglishBuddy - IELTS Learning App</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        /* Custom styles for animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .fade-in {
-            animation: fadeIn 1s ease-out;
-        }
-
-        .hero-background {
-            background: linear-gradient(to right, #667eea, #764ba2);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EnglishBuddy - IELTS Learning App</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/daisyui/dist/full.css" rel="stylesheet">
+        <!-- Your custom styles -->
+        <style>
+            /* Custom styles for animations */
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+    
+            .hero-background {
+                background: linear-gradient(to right, #667eea, #764ba2);
+                background-size: 400% 400%;
+                animation: gradientShift 15s ease infinite;
+            }
+    
+            @keyframes gradientShift {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+        </style>
+    </head>
 <body class="font-sans bg-gray-100">
 
     <!-- Navigation Bar -->
-    <nav class="bg-gradient-to-r from-blue-500 to-purple-600 p-4 text-white shadow-lg">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-3xl font-bold tracking-wide transform transition duration-300 hover:scale-105">EnglishBuddy</a>
-            <div class="flex items-center">
-                <a id="dashboardBtn" href="/dashboards/" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded transition duration-300 mr-4">
-                    Dashboard
-                </a>
+    <nav class="navbar bg-gradient-to-r from-red-400 to-red-500 text-white shadow-2xl rounded-xl absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="#" class="text-2xl font-bold">EnglishBuddy</a>
+            <a id="dashboardBtn" href="/dashboards/" class="btn bg-white text-red-500 hover:bg-red-100 btn-wide font-bold rounded-lg">
+                Dashboard
+            </a>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <div class="hero min-h-screen hero-background fade-in pt-20">
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="text-center hero-content text-neutral-content">
+            <div class="max-w-md mx-auto">
+                <h1 class="mb-5 text-5xl font-bold">Master IELTS with EnglishBuddy</h1>
+                <p class="mb-5 text-xl">
+                    Join our community of learners and achieve your dreams with personalized IELTS preparation.
+                </p>
+                <a href="/dashboards/" class="btn bg-white text-red-500 hover:bg-red-100">Begin Now</a>
             </div>
         </div>
-    </nav>    
-
-    <!-- Hero Section -->
-    <div class="hero-background text-white text-center py-20 fade-in">
-        <h1 class="text-5xl font-bold mb-6">Master IELTS with EnglishBuddy</h1>
-        <p class="text-xl mx-auto leading-relaxed max-w-xl">
-            Join our community of learners and achieve your dreams with personalized IELTS preparation.
-        </p>
     </div>
 
     <!-- Main Content -->
     <div class="container mx-auto my-10 px-4">
         <!-- Introduction Section with Translucent Effect -->
         <section class="mb-10 text-center bg-white/80 backdrop-blur-sm hover:backdrop-blur-md transition-all duration-500">
-            <h2 class="text-3xl font-bold mb-6">Why Choose EnglishBuddy?</h2>
-            <p class="text-lg mx-auto max-w-2xl">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800">Why Choose EnglishBuddy?</h2>
+            <p class="text-lg mx-auto max-w-2xl text-gray-700">
                 EnglishBuddy offers a comprehensive approach to mastering the IELTS exam with personalized learning, expert instructors, and a supportive community.
             </p>
         </section>
     
         <!-- Features Section with Hover Animation -->
-        <section class="mb-10">
-            <h3 class="text-2xl font-bold text-center mb-6">Our Features</h3>
-            <div class="flex flex-col md:flex-row font-sans">
-                <!-- Feature 1 -->
-                <div class="flex-auto p-6 border-b md:border-r md:border-b-0 border-slate-200 hover:-translate-y-1 hover:shadow-lg transition-transform duration-300">
-                    <div class="flex flex-wrap">
-                        <h1 class="flex-auto text-xl font-medium text-slate-900">
-                            Personalized Study Plans
-                        </h1>
-                        <div class="text-sm font-medium text-slate-400">
-                            Tailored Learning
-                        </div>
+        <section class="mb-10 px-4 md:px-0">
+            <h3 class="text-3xl font-bold text-center mb-8 text-gray-800">Our Features</h3>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+
+                <!-- Feature 1: Personalized Study Plans -->
+                <div class="card w-full md:w-96 bg-white border border-red-200 hover:border-red-300 shadow-lg hover:shadow-2xl transition-transform duration-300 hover:-translate-y-1 rounded-lg">
+                    <div class="card-body">
+                        <h2 class="card-title text-red-500">Personalized Study Plans</h2>
+                        <p>Customized learning paths tailored to your strengths and weaknesses, ensuring efficient study and faster progress.</p>
                     </div>
-                    <p class="mt-4 text-sm text-slate-500">
-                        Customized learning paths tailored to your strengths and weaknesses, ensuring efficient study and faster progress.
-                    </p>
                 </div>
-            
-                <!-- Feature 2 -->
-                <div class="flex-auto p-6 border-b md:border-r md:border-b-0 border-slate-200 hover:-translate-y-1 hover:shadow-lg transition-transform duration-300">
-                    <div class="flex flex-wrap">
-                        <h1 class="flex-auto text-xl font-medium text-slate-900">
-                            Expert Instructors
-                        </h1>
-                        <div class="text-sm font-medium text-slate-400">
-                            Professional Guidance
-                        </div>
+
+                <!-- Feature 2: Interactive Learning Tools -->
+                <div class="card w-full md:w-96 bg-white border border-red-200 hover:border-red-300 shadow-lg hover:shadow-2xl transition-transform duration-300 hover:-translate-y-1 rounded-lg">
+                    <div class="card-body">
+                        <h2 class="card-title text-red-500">Interactive Learning Tools</h2>
+                        <p>Engage with interactive lessons, practice tests, and real-time quizzes to reinforce your learning and build confidence.</p>
                     </div>
-                    <p class="mt-4 text-sm text-slate-500">
-                        Learn from experienced IELTS educators who provide guidance, feedback, and strategies to excel in the exam.
-                    </p>
                 </div>
-            
-                <!-- Feature 3 -->
-                <div class="flex-auto p-6 hover:-translate-y-1 hover:shadow-lg transition-transform duration-300">
-                    <div class="flex flex-wrap">
-                        <h1 class="flex-auto text-xl font-medium text-slate-900">
-                            Interactive Learning Tools
-                        </h1>
-                        <div class="text-sm font-medium text-slate-400">
-                            Engaging Resources
-                        </div>
+
+                <!-- Feature 3: AI-Powered Conversational Speaking -->
+                <div class="card w-full md:w-96 bg-white border border-red-200 hover:border-red-300 shadow-lg hover:shadow-2xl transition-transform duration-300 hover:-translate-y-1 rounded-lg">
+                    <div class="card-body">
+                        <h2 class="card-title text-red-500">AI-Powered Conversational Speaking</h2>
+                        <p>EnglishBuddy uses the latest AI technology to provide immersive conversational speaking experiences, enhancing language fluency.</p>
                     </div>
-                    <p class="mt-4 text-sm text-slate-500">
-                        Engage with interactive lessons, practice tests, and real-time quizzes to reinforce your learning and build confidence.
-                    </p>
                 </div>
-            </div>    
+
+            </div>
         </section>
 
-        <!-- Testimonials Section -->
-        <section class="mb-10">
-            <h3 class="text-2xl font-bold text-center mb-6">Success Stories</h3>
-            <div class="flex flex-wrap justify-center gap-6">
-                <!-- Testimonial 1 -->
-                <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300 w-full md:w-1/2">
-                    <blockquote class="italic">"Thanks to EnglishBuddy, I achieved a band score of 8.0! The personalized coaching and practice tests were game changers for me."</blockquote>
-                    <p class="mt-4 font-bold">- Alex Johnson</p>
+        <!-- FAQ Section -->
+        <section class="mb-10 px-4 md:px-0">
+            <h3 class="text-3xl font-bold text-center mb-8 text-gray-800">Frequently Asked Questions</h3>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <!-- FAQ 1 -->
+                <div class="card w-full md:w-96 bg-white border border-red-200 hover:border-red-300 shadow-lg hover:shadow-2xl transition-transform duration-300 hover:-translate-y-1 rounded-lg">
+                    <div class="card-body">
+                        <h4 class="card-title text-red-500">How does EnglishBuddy personalize learning?</h4>
+                        <p>EnglishBuddy uses advanced algorithms to tailor learning paths based on individual strengths and weaknesses, ensuring a more effective and personalized learning experience.</p>
+                    </div>
                 </div>
-                <!-- Testimonial 2 -->
-                <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300 w-full md:w-1/2">
-                    <blockquote class="italic">"The interactive tools and supportive community made learning enjoyable. I highly recommend EnglishBuddy to anyone aiming for a high IELTS score."</blockquote>
-                    <p class="mt-4 font-bold">- Maria Gonzalez</p>
+                <!-- FAQ 2 -->
+                <div class="card w-full md:w-96 bg-white border border-red-200 hover:border-red-300 shadow-lg hover:shadow-2xl transition-transform duration-300 hover:-translate-y-1 rounded-lg">
+                    <div class="card-body">
+                        <h4 class="card-title text-red-500">What kind of interactive tools does EnglishBuddy offer?</h4>
+                        <p>Our platform offers a range of interactive tools, including real-time quizzes, practice tests, and interactive lessons, to make learning engaging and effective.</p>
+                    </div>
                 </div>
             </div>
         </section>
+
 
         <!-- Call to Action Section -->
-        <section class="text-center py-12 hero-background bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-xl shadow-lg">
-            <h3 class="text-3xl md:text-4xl font-extrabold mb-5">Embark on Your IELTS Journey Today!</h3>
-            <p class="mb-8 text-lg font-medium leading-relaxed">Join our vibrant community and gain access to top-tier resources for comprehensive IELTS preparation.</p>
-            <a href="/dashboards/" class="bg-white text-purple-800 hover:text-purple-600 font-semibold text-lg py-3 px-8 rounded-lg shadow hover:shadow-md transition duration-300 ease-in-out">
-                Begin Now
-            </a>
+        <section class="text-center py-12 bg-gradient-to-r from-red-400 to-red-500 rounded-lg shadow-xl mb-10">
+            <div class="bg-white/80 backdrop-blur-sm hover:backdrop-blur-md transition-all duration-500 p-6 rounded-lg">
+                <h3 class="text-4xl font-extrabold mb-6 text-gray-800">Start Your AI-Enhanced IELTS Preparation Today!</h3>
+                <p class="text-lg mx-auto max-w-2xl text-gray-700 mb-8">
+                    Dive into the future of language learning with EnglishBuddy, where cutting-edge AI technology meets personalized education. Experience a new era of IELTS preparation with intelligent tools designed to elevate your learning journey.
+                </p>
+                <a href="/dashboards/" class="btn bg-white text-red-500 hover:bg-red-100 btn-wide font-bold rounded-lg">
+                    Begin Now
+                </a>
+            </div>
         </section>
-    </div>
 
-
-    <!-- Footer -->
-    <footer class="bg-gradient-to-r from-blue-600 to-purple-700 text-white text-center p-6 fade-in">
-        <div class="container mx-auto">
-            <div class="mb-4">
-                <a href="#" class="text-2xl font-bold hover:text-blue-200 transition duration-300">EnglishBuddy</a>
+        <!-- Footer -->
+        <footer class="navbar bg-gradient-to-r from-red-400 to-red-500 text-white shadow-2xl rounded-xl z-10">
+            <div class="container mx-auto flex justify-between items-center px-4">
+                <a href="#" class="text-2xl font-bold">EnglishBuddy</a>
+                <div>
+                    <a href="#" class="link link-hover text-white">Home</a>
+                    <a href="#" class="link link-hover text-white">About</a>
+                    <a href="#" class="link link-hover text-white">Services</a>
+                    <a href="#" class="link link-hover text-white">Contact</a>
+                </div>
             </div>
-            <div class="mb-4">
-                <p>Explore, Learn, and Conquer IELTS</p>
-            </div>
-            <div class="flex justify-center space-x-4 mb-4">
-                <a href="#" class="hover:text-blue-200 transition duration-300">Home</a>
-                <a href="#" class="hover:text-blue-200 transition duration-300">About</a>
-                <a href="#" class="hover:text-blue-200 transition duration-300">Services</a>
-                <a href="#" class="hover:text-blue-200 transition duration-300">Contact</a>
-            </div>
-            <div>
-                <p>© 2023 EnglishBuddy - All Rights Reserved</p>
-            </div>
-            <button id="adminLoginBtn" class="bg-white hover:bg-gray-100 text-purple-700 font-bold py-2 px-4 rounded transition duration-300 shadow mt-4">
-                Admin Login
-            </button>
-        </div>
-    </footer>
-    
+        </footer>
 
 </body>
 </html>
