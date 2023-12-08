@@ -4,14 +4,14 @@ body {
   font-family: "Jost", sans-serif;
 }
 
-nav{
+nav {
   z-index: 10001 !important;
 }
 
-.gradientBg{
-  background: linear-gradient(99deg, #EBE4D1 0%, #E55604 100%);
+.gradientBg {
+  background: linear-gradient(99deg, #ebe4d1 0%, #e55604 100%);
 }
 
-.btnPrimary{
+.btnPrimary {
   @apply py-2 px-8 bg-secondary font-semibold text-white rounded hover:bg-orange transition-all duration-300;
 }

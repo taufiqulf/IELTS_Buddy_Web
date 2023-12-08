@@ -1,8 +1,12 @@
 import { useState } from "react";
 import logo from "../assets/logo.png";
+
 // REACT ICONS
 import { GrLanguage } from "react-icons/gr";
 import { FaBars, FaXmark } from "react-icons/fa6";
+
+// REACT SCROLLBARS
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [isMenuopen, setIsMenuOpen] = useState(false);
@@ -13,10 +17,11 @@ const Navbar = () => {
 
   const navItems = [
     { link: "Overview", path: "home" },
-    { link: "Test", path: "test" },
     { link: "Feature", path: "feature" },
+    { link: "Test", path: "test" },
     { link: "Support", path: "support" },
   ];
+
   return (
     <>
       <nav className="bg-primary md:px-14 p-4 max-w-screen border-b mx-auto text-secondary fixed top-0 right-0 left-0">
@@ -29,9 +34,16 @@ const Navbar = () => {
             {/* NAVITEMS */}
             <ul className="md:flex space-x-12 hidden">
               {navItems.map(({ link, path }) => (
-                <a key={link} href={path} className="block hover:text-gray-500">
+                <Link
+                  activeClass="active"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  key={link}
+                  to={path}
+                  className="block hover:text-orange cursor-pointer">
                   {link}
-                </a>
+                </Link>
               ))}
             </ul>
           </div>
@@ -61,9 +73,17 @@ const Navbar = () => {
           isMenuopen ? "block fixed top-0 right-0 left-0" : "hidden"
         }`}>
         {navItems.map(({ link, path }) => (
-          <a key={link} href={path} className="block hover:text-gray-300">
+          <Link
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            key={link}
+            to={path}
+            className="block text-primary hover:text-tartiary"
+            onClick={toggleMenu}>
             {link}
-          </a>
+          </Link>
         ))}
       </div>
     </>

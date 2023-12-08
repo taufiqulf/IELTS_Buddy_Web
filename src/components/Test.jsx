@@ -6,11 +6,11 @@ import Card from "../shared/Card";
 
 const Test = () => {
   return (
-    <div className="md:px-14 p-4 max-w-s mx-auto space-y py-10">
+    <div className="md:px-14 p-4 max-w-s mx-auto space-y pb-20" id="test">
       <div className="text-center">
-        <h2 className="md:text-5xl text-3xl font-extrabold text-secondary mb-2">Take Your Test</h2>
+        <h2 className="text-5xl font-extrabold text-secondary mb-2">Take Your Test</h2>
       </div>
-      <p className="text-secondary md:w-1/3 mx-auto px-4 text-xl">
+      <p className="text-secondary max-w-s mx-auto px-4 text-xl text-center">
         Master the language of success with English Buddy for IELTS Excellence! #IELTSReady #EnglishBuddy
       </p>
 

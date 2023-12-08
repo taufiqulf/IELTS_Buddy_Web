@@ -2,15 +2,15 @@ import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <div className="bg-secondary md:px-14 p-4 max-w-screen mx-auto">
+    <div className="bg-secondary md:px-14 p-4 max-w-screen mx-auto" id="support">
       <div className="my-12 flex flex-col md:flex-row gap-10">
         {/* COPYRIGHT & SUBSCRIBE */}
         <div className="md:w-1/2 space-y-8">
           <a href="/" className="text-2xl font-semibold flex items-center space-x-3 text-secondary">
             <img src={logo} alt="" className="w-10 inline-block items-center" />
-            <span className="text-primary">E-Buddy</span>
+            <span className="text-orange">E-Buddy</span>
           </a>
-          <p className="md:w-1/2 text-primary">
+          <p className="text-primary">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt doloremque, nesciunt at nulla ab alias
             consequuntur deleniti eaque praesentium amet vitae iure quis enim eveniet odit explicabo rerum dicta maxime.
           </p>
@@ -20,7 +20,7 @@ const Footer = () => {
               name="email"
               id="email"
               placeholder="Your email"
-              className="bg-primary py-2 px-4 rounded-md focus:outline-none"
+              className="bg-primary text-orange py-2 px-4 rounded-md focus:outline-none"
             />
             <input
               type="submit"
@@ -32,7 +32,7 @@ const Footer = () => {
         {/* FOOTER NAVIGATION */}
         <div className="md:w-1/2 flex flex-col md:flex-row flex-wrap justify-between gap-8 items-start">
           <div className="text-primary space-y-4 mt-5">
-            <h4 className="text-xl">Platform</h4>
+            <h4 className="text-xl font-semibold text-orange">Platform</h4>
             <ul className="space-y-3">
               <a href="/" className="block hover:text-white">
                 Overview
@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
           {/* HELP */}
           <div className="text-primary space-y-4 mt-5">
-            <h4 className="text-xl">Help</h4>
+            <h4 className="text-xl font-semibold text-orange">Help</h4>
             <ul className="space-y-3">
               <a href="/" className="block hover:text-white">
                 How does it works?
@@ -68,10 +68,10 @@ const Footer = () => {
           </div>
           {/* CONTACTS */}
           <div className="text-primary space-y-4 mt-5">
-            <h4 className="text-xl">Contacts</h4>
+            <h4 className="text-xl font-semibold text-orange">Contacts</h4>
             <ul className="space-y-3">
-              <p>(021)23456789</p>
-              <p>contactsupport@ebuddy.com</p>
+              <p>(021)-23456789</p>
+              <p>support@ebuddy.com</p>
               <p>Jakarta, Indonesia</p>
             </ul>
           </div>
@@ -81,7 +81,7 @@ const Footer = () => {
       <hr />
 
       <div className="flex items-center justify-center">
-        <p className="text-primary">@E-Buddy 2023. All rights reserved.</p>
+        <p className="text-primary">@English Buddy 2023. All rights reserved.</p>
       </div>
     </div>
   );
