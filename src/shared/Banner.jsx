@@ -13,7 +13,7 @@ const Banner = ({ banner, heading, subheading, btn1 }) => {
             <h2 className="md:text-7xl text-4xl font-bold text-secondary mb-6 leading-relaxed">{heading}</h2>
             <p className="text-secondary text-2xl mb-8">{subheading}</p>
             <div className="space-x-5 space-y-4">
-              <button className="btnPrimary">{btn1}</button>
+              <button className="btnPrimary text-xl">{btn1}</button>
             </div>
           </div>
         </div>

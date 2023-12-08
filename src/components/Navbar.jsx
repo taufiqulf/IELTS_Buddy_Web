@@ -13,7 +13,6 @@ const Navbar = () => {
 
   const navItems = [
     { link: "Overview", path: "home" },
-    { link: "About", path: "about" },
     { link: "Test", path: "test" },
     { link: "Support", path: "support" },
   ];
@@ -42,7 +41,7 @@ const Navbar = () => {
               <GrLanguage className="mr-2" />
               <span>Language</span>
             </a>
-            <button className="bg-primary text-orange py-2 px-4 transition-all duration-300 rounded hover:text-white hover:bg-orange">
+            <button className="bg-secondary text-primary py-2 px-4 transition-all duration-300 rounded hover:text-white hover:bg-orange">
               Sign Up
             </button>
           </div>

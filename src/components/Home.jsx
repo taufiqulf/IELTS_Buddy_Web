@@ -6,8 +6,10 @@ const Home = () => {
     <div className="md:px-12 p-4 max-w-screen-2xl mx-auto mt-24">
       <Banner
         banner={banner}
-        heading={"English Buddy"}
-        subheading={"Master the language of success with English Buddy - Your Ultimate Companion for IELTS Excellence! "}
+        heading={"Start Your AI-Enhanced IELTS Preparation Today!"}
+        subheading={
+          "Dive into the future of language learning with EnglishBuddy, where cutting-edge AI technology meets personalized education. Experience a new era of IELTS preparation with intelligent tools designed to elevate your learning journey."
+        }
         btn1={"Start Test"}
       />
     </div>

@@ -9,6 +9,9 @@ export default {
         tartiary: "#B4B4B3",
         orange: "#E55604",
       },
+      boxShadow: {
+        "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
+      },
     },
   },
   plugins: [],
