@@ -5,7 +5,7 @@ import feature3 from "../assets/feature3.png";
 const Features = () => {
   return (
     <div className="my-24 md:px-14 max-w-screen-2xl mx-auto">
-      <div className="flex flex-col lg:flex-row justify-between items-start gap-10">
+      <div className="flex flex-col lg:flex-row justify-between items-start gap-10 p-3">
         <div className="lg:w-1/4">
           <h3 className="text-5xl text-secondary font-bold lg:w-1/2 mb-3">Why English Buddy?</h3>
           <p className="text-xl text-secondary">
@@ -17,7 +17,7 @@ const Features = () => {
         <div className="w-full lg:w-3/4">
           <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-start md:gap-12 gap-8">
             <div
-              className="bg-[rgba(255, 255, 255, 0.04)] rounded-[35px] h-96 shadow-3xl p-8 items-center flex items-center justify-center
+              className="bg-[rgba(255, 255, 255, 0.04)] rounded-[35px] h-96 shadow-3xl p-8 flex items-center justify-center
           hover:-translate-y-4 transition-all duration-300">
               <div>
                 <img src={feature1} alt="" />
@@ -25,7 +25,7 @@ const Features = () => {
               </div>
             </div>
             <div
-              className="bg-[rgba(255, 255, 255, 0.04)] rounded-[35px] h-96 shadow-3xl p-8 items-center flex items-center justify-center
+              className="bg-[rgba(255, 255, 255, 0.04)] rounded-[35px] h-96 shadow-3xl p-8 flex items-center justify-center
           hover:-translate-y-4 transition-all duration-300">
               <div>
                 <img src={feature2} alt="" />
@@ -33,7 +33,7 @@ const Features = () => {
               </div>
             </div>
             <div
-              className="bg-[rgba(255, 255, 255, 0.04)] rounded-[35px] h-96 shadow-3xl p-8 items-center flex items-center justify-center
+              className="bg-[rgba(255, 255, 255, 0.04)] rounded-[35px] h-96 shadow-3xl p-8 flex items-center justify-center
           hover:-translate-y-4 transition-all duration-300">
               <div>
                 <img src={feature3} alt="" />
