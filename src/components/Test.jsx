@@ -16,7 +16,7 @@ const Test = () => {
 
       {/* TEST CARD */}
       <div className="mt-16">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-screen-2xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-screen mx-auto">
           <Card
             ilust={listening}
             title={"Listening Test"}
@@ -38,7 +38,7 @@ const Test = () => {
           <Card
             ilust={speaking}
             title={"Speaking Test"}
-            desc={"Practice your spoken English with our interactive speaking test simulations."}
+            desc={"Practice your spoken English skills with our interactive speaking test simulations."}
             btn2={"Start Test"}
           />
         </div>
