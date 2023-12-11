@@ -16,6 +16,13 @@ const Test = () => {
 
       {/* TEST CARD */}
       <div className="mt-16">
+        <div>
+          <a href="/">
+            <div className="flex items-center justify-center pb-12">
+              <button className="btnPrimary text-3xl text-brokenwhite">Take Your Test</button>
+            </div>
+          </a>
+        </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-screen mx-auto ">
           <Card
             ilust={listening}
@@ -41,9 +48,6 @@ const Test = () => {
             desc={"Practice your spoken English skills with our interactive speaking test simulations."}
             btn2={"Start Test"}
           />
-        </div>
-        <div className="flex items-center justify-center pt-12">
-          <button className="btnPrimary text-3xl text-brokenwhite">Take Your Test</button>
         </div>
       </div>
     </div>
