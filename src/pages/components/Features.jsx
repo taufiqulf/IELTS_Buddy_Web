@@ -7,7 +7,7 @@ const Features = () => {
     <div className="my-24 md:px-14 max-w-screen mx-auto" id="feature">
       <div className="flex flex-col lg:flex-row justify-between items-start gap-10 p-3">
         <div className="lg:w-1/4">
-          <h3 className="text-3xl md:text-5xl text-secondary font-bold lg:w-1/2 mb-3">Why EnglishBuddy?</h3>
+          <h3 className="text-5xl text-secondary font-bold lg:w-1/2 mb-3">Why EnglishBuddy?</h3>
           <p className="text-xl text-secondary">
             EnglishBuddy offers a comprehensive approach to mastering the IELTS exam with personalized learning, expert
             instructors, and a supportive community.

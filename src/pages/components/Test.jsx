@@ -6,7 +6,7 @@ import Card from "../shared/Card";
 
 const Test = () => {
   return (
-    <div className="md:px-14 p-4 max-w-s mx-auto space-y pb-20" id="test">
+    <div className="md:px-14 p-4 max-w-s mx-auto pb-20" id="test">
       <div className="text-center">
         <h2 className="text-3xl sm:text-5xl text-secondary font-bold mb-2">Take Your Test</h2>
       </div>
@@ -15,7 +15,7 @@ const Test = () => {
       </p>
 
       {/* TEST CARD */}
-      <div className="mt-16">
+      <div className="mt-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-screen mx-auto ">
           <Card
             ilust={listening}
