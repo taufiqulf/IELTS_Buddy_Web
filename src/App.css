@@ -13,6 +13,10 @@ nav {
   background: linear-gradient(99deg, #ebe4d1 0%, #e55604 100%);
 }
 
+.gradientBg1 {
+  background: linear-gradient(99deg, #26577c 0%, #b4b4b3 100%);
+}
+
 .btnPrimary {
   @apply py-2 px-8 bg-secondary font-semibold text-white rounded hover:bg-orange transition-all duration-300;
 }

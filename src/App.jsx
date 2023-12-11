@@ -5,6 +5,7 @@ import Navbar from "../src/pages/components/Navbar";
 import Features from "../src/pages/components/Features";
 import Test from "../src/pages/components/Test";
 import Footer from "../src/pages/shared/Footer";
+import Speech from "./pages/components/Speech";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Home />
       <Features />
       <Test />
+      <Speech />
       <Footer />
     </>
   );
