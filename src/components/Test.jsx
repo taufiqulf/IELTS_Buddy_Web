@@ -1,3 +1,4 @@
+Test.jsx
 import listening from "../assets/listening.png";
 import reading from "../assets/reading.png";
 import writing from "../assets/writing.png";
@@ -16,7 +17,7 @@ const Test = () => {
 
       {/* TEST CARD */}
       <div className="mt-16">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-screen mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-screen mx-auto ">
           <Card
             ilust={listening}
             title={"Listening Test"}
@@ -41,6 +42,9 @@ const Test = () => {
             desc={"Practice your spoken English skills with our interactive speaking test simulations."}
             btn2={"Start Test"}
           />
+        </div>
+        <div className="flex items-center justify-center pt-12">
+          <button className="btnPrimary text-3xl text-brokenwhite">Take Your Test</button>
         </div>
       </div>
     </div>
