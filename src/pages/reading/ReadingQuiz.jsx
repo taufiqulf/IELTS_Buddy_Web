@@ -1,9 +1,9 @@
 import MLK from "/src/assets/mlk.png";
 
-const ListeningQuiz = () => {
+const ReadingQuiz = () => {
   return (
     <div className="md:px-12 p-4 flex space-x-10 flex mx-auto ">
-      <div className="gradientBg1 rounded-xl rounded-br-[80px] rounded-tl-[80px] md:p-9 px-4 py-9 mb-10 shadow-3xl">
+      <div className="gradientBg rounded-xl rounded-br-[80px] rounded-tl-[80px] md:p-9 px-4 py-9 mb-10 shadow-3xl">
         <div className="flex flex-col md:flex-row-reverse justify-between items-center gap-10">
           {/* banner image */}
           <div>
@@ -25,4 +25,4 @@ const ListeningQuiz = () => {
   );
 };
 
-export default ListeningQuiz;
+export default ReadingQuiz;

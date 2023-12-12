@@ -28,21 +28,21 @@ const Test = () => {
             ilust={reading}
             title={"Reading Test"}
             desc={"Improve your reading comprehension with a variety of practice passages and quizzes."}
-            path={"src/pages/reading.html"}
+            path={"src/pages/reading/reading.html"}
             btn2={"Take Reading Test"}
           />
           <Card
             ilust={writing}
             title={"Writing Test"}
             desc={"Enhance your writing skills through guided quizzes and essay writing practices."}
-            path={"src/pages/writing.html"}
+            path={"src/pages/writing/writing.html"}
             btn2={"Take Writing Test"}
           />
           <Card
             ilust={speaking}
             title={"Speaking Test"}
             desc={"Practice your spoken English skills with our interactive speaking test simulations."}
-            path={"src/pages/speaking.html"}
+            path={"src/pages/speaking/speaking.html"}
             btn2={"Take Speaking Test"}
           />
         </div>

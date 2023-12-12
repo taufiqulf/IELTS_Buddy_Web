@@ -1,6 +1,6 @@
 import MLK from "/src/assets/mlk.png";
 
-const ListeningQuiz = () => {
+const WritingQuiz = () => {
   return (
     <div className="md:px-12 p-4 flex space-x-10 flex mx-auto ">
       <div className="gradientBg1 rounded-xl rounded-br-[80px] rounded-tl-[80px] md:p-9 px-4 py-9 mb-10 shadow-3xl">
@@ -25,4 +25,4 @@ const ListeningQuiz = () => {
   );
 };
 
-export default ListeningQuiz;
+export default WritingQuiz;
