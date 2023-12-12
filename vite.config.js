@@ -9,10 +9,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: "index.html",
-        listening: "src/pages/listening.html",
-        reading: "src/pages/reading.html",
-        writing: "src/pages/writing.html",
-        speaking: "src/pages/speaking.html",
+        listening: "src/pages/listening/listening.html",
+        reading: "src/pages/reading/reading.html",
+        writing: "src/pages/writing/writing.html",
+        speaking: "src/pages/speaking/speaking.html",
       },
     },
   },

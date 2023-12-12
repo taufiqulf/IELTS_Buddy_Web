@@ -48,15 +48,13 @@ const Navbar = () => {
             </ul>
           </div>
 
-          {/* SIGN UP & LANGUAGE */}
+          {/* DOWNLOAD */}
           <div className="space-x-12 hidden md:flex items-center">
-            <a href="/" className="hidden lg:flex items-center hover:text-gray-500">
-              <GrLanguage className="mr-2" />
-              <span>Language</span>
+            <a href="/">
+              <button className="bg-secondary text-primary py-2 px-4 transition-all duration-300 rounded hover:text-white hover:bg-orange">
+                Try Our Mobile App
+              </button>
             </a>
-            <button className="bg-secondary text-primary py-2 px-4 transition-all duration-300 rounded hover:text-white hover:bg-orange">
-              Sign Up
-            </button>
           </div>
 
           {/* MOBILE BUTTON */}

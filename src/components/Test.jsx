@@ -21,7 +21,7 @@ const Test = () => {
             ilust={listening}
             title={"Listening Test"}
             desc={"Sharpen your listening skills with our practice exercises and simulated test environments."}
-            path={"src/pages/listening.html"}
+            path={"src/pages/listening/listening.html"}
             btn2={"Take Listening Test"}
           />
           <Card
