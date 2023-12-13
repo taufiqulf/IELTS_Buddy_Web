@@ -55,72 +55,80 @@ const ListeningQuiz = () => {
   };
 
   return (
-    <div className="max-w-screen mt-20">
-      <div className="md:px-12 p-4 flex space-x-10 flex items-center justify-center">
-        <div>
-          <audio controls src="./listening.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-          </audio>
+    <div className="flex items-center justify-center my-5">
+      <div className="max-w-screen w-2/3 mt-20 bg-primary text-secondary py-5 md:px-6 px-4 rounded-[35px]">
+        <div className="sm:text-2xl text-xl">
+          {result ? (
+            <></>
+          ) : (
+            <>
+              <div className="flex items-center justify-center py-5">
+                <audio controls src="./listening.mp3" type="audio/mp3">
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+              <h2 className="font-bold p-4 flex items-center justify-center">{question.question}</h2>
+              <div className="flex items-center justify-center">
+                <ul className="cursor-pointer">
+                  <li
+                    className="border border-secondary rounded-[35px] px-5 py-1 mb-5"
+                    ref={Option1}
+                    onClick={(e) => {
+                      checkAns(e, 1);
+                    }}>
+                    {question.option1}
+                  </li>
+                  <li
+                    className="border border-secondary rounded-[35px] px-5 py-1 mb-5"
+                    ref={Option2}
+                    onClick={(e) => {
+                      checkAns(e, 2);
+                    }}>
+                    {question.option2}
+                  </li>
+                  <li
+                    className="border border-secondary rounded-[35px] px-5 py-1 mb-5"
+                    ref={Option3}
+                    onClick={(e) => {
+                      checkAns(e, 3);
+                    }}>
+                    {question.option3}
+                  </li>
+                  <li
+                    className="border border-secondary rounded-[35px] px-5 py-1 mb-5"
+                    ref={Option4}
+                    onClick={(e) => {
+                      checkAns(e, 4);
+                    }}>
+                    {question.option4}
+                  </li>
+                </ul>
+              </div>
+              <div className="flex justify-center items-center pt-2">
+                <h2 className="text-xl">
+                  {index + 1} of {quiz.length} questions
+                </h2>
+              </div>
+              <div className="flex justify-center items-center pt-2">
+                <button onClick={next} className="btnPrimary text-xl">
+                  Next
+                </button>
+              </div>
+            </>
+          )}
+          {result ? (
+            <>
+              <h2>
+                You Scored {score} out of {quiz.length}
+              </h2>
+              <button onClick={reset} className="btnPrimary">
+                Reset
+              </button>
+            </>
+          ) : (
+            <></>
+          )}
         </div>
-      </div>
-      <div className="quiz-container">
-        {result ? (
-          <></>
-        ) : (
-          <>
-            <h2 className="md:px-12 p-4 flex space-x-10 flex items-center justify-center">
-              {index + 1}. {question.question}
-            </h2>
-            <ul>
-              <li
-                ref={Option1}
-                onClick={(e) => {
-                  checkAns(e, 1);
-                }}>
-                {question.option1}
-              </li>
-              <li
-                ref={Option2}
-                onClick={(e) => {
-                  checkAns(e, 2);
-                }}>
-                {question.option2}
-              </li>
-              <li
-                ref={Option3}
-                onClick={(e) => {
-                  checkAns(e, 3);
-                }}>
-                {question.option3}
-              </li>
-              <li
-                ref={Option4}
-                onClick={(e) => {
-                  checkAns(e, 4);
-                }}>
-                {question.option4}
-              </li>
-            </ul>
-            <button onClick={next} className="btnPrimary">
-              Next
-            </button>
-            <div>
-              {index + 1} of {quiz.length} questions
-            </div>
-          </>
-        )}
-        {result ? (
-          <>
-            <h2>
-              You Scored {score} out of {quiz.length}
-            </h2>
-            <button onClick={reset} className="btnPrimary">
-              Reset
-            </button>
-          </>
-        ) : (
-          <></>
-        )}
       </div>
     </div>
   );
