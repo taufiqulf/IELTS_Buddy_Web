@@ -56,7 +56,7 @@ const ListeningQuiz = () => {
 
   return (
     <div className="flex items-center justify-center my-5">
-      <div className="max-w-screen w-2/3 mt-20 bg-primary text-secondary py-5 md:px-6 px-4 rounded-[35px]">
+      <div className="max-w-screen w-full md:mx-10 mx-5 bg-primary text-secondary py-5 md:px-6 px-4 rounded-[35px]">
         <div className="sm:text-2xl text-xl">
           {result ? (
             <></>
@@ -118,12 +118,21 @@ const ListeningQuiz = () => {
           )}
           {result ? (
             <>
-              <h2>
-                You Scored {score} out of {quiz.length}
-              </h2>
-              <button onClick={reset} className="btnPrimary">
-                Reset
-              </button>
+              <div className="grid place-items-center space-y-5">
+                <h2 className="">
+                  You Scored {score} out of {quiz.length}
+                </h2>
+                <button onClick={reset} className="btnPrimary ">
+                  Reset
+                </button>
+                <h2>Want to explore more?</h2>
+                <img src="/logo.png" className="h-[142px]" />
+                <a href="/">
+                  <button className="btnPrimary py-2 px-4 transition-all duration-300 rounded hover:text-white hover:bg-orange">
+                    Try Our Mobile App
+                  </button>
+                </a>
+              </div>
             </>
           ) : (
             <></>

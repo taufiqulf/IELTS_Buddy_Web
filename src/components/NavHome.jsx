@@ -2,13 +2,12 @@ import { useState } from "react";
 import logo from "../assets/logo.png";
 
 // REACT ICONS
-import { GrLanguage } from "react-icons/gr";
 import { FaBars, FaXmark } from "react-icons/fa6";
 
 // REACT SCROLLBARS
 import { Link } from "react-scroll";
 
-const Navbar = () => {
+const NavHome = () => {
   const [isMenuopen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -24,8 +23,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-primary md:px-14 p-4 max-w-screen border-b mx-auto text-secondary fixed top-0 right-0 left-0">
-        <div className="text-lg container mx-auto flex justify-between items-center font-medium">
+      <nav className="bg-primary md:px-14 p-4 max-w-screen mx-auto text-secondary fixed top-0 right-0 left-0">
+        <div className="text-lg container flex mx-auto justify-between items-center font-medium">
           <div className="flex space-x-14 items-center">
             <a href="/" className="text-2xl font-semibold flex items-center space-x-3 text-secondary">
               <img src={logo} alt="" className="w-10 inline-block items-center" /> <span>E-Buddy</span>
@@ -49,7 +48,7 @@ const Navbar = () => {
           </div>
 
           {/* DOWNLOAD */}
-          <div className="space-x-12 hidden md:flex items-center">
+          <div className="hidden md:flex justify-self-end">
             <a href="/">
               <button className="bg-secondary text-primary py-2 px-4 transition-all duration-300 rounded hover:text-white hover:bg-orange">
                 Try Our Mobile App
@@ -88,4 +87,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavHome;

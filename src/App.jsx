@@ -1,7 +1,7 @@
 import "./App.css";
 import "./index.css";
 import Home from "./components/Home";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NavHome";
 import Features from "./components/Features";
 import Test from "./components/Test";
 import Footer from "./shared/Footer";
