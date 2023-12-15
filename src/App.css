@@ -20,3 +20,11 @@ nav {
 .btnPrimary {
   @apply py-2 px-8 bg-secondary font-semibold text-white rounded hover:bg-orange transition-all duration-300;
 }
+
+.correct {
+  background: #00d397;
+}
+
+.incorrect {
+  background: #ff4a4a;
+}
