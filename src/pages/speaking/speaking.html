@@ -5,9 +5,42 @@
     <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Speaking Test</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .mic {
+        width: 50px;
+        height: 50px;
+        background-color: #3498db;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 24px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .mic:hover {
+        background-color: #2980b9;
+      }
+    </style>
   </head>
   <body>
     <div id="speaking"></div>
+
+    <div class="container">
+      <div class="preview"></div>
+      <div class="mic">&#127929;</div>
+    </div>
+    <script src="vrecorder.js"></script>
+
+    <div id="speaking-footer"></div>
     <script type="module" src="./speaking.jsx"></script>
   </body>
 </html>
