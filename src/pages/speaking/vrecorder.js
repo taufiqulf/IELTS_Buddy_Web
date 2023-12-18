@@ -69,7 +69,7 @@ const addButton = (id, funString, text) => {
   const btn = document.createElement("button");
   btn.id = id;
   btn.setAttribute("onclick", funString);
-  btn.textContent = text;
+  btn.innerHTML = text;
   controllerWrapper.append(btn);
 };
 
@@ -92,7 +92,7 @@ const application = (index) => {
       clearDisplay();
       clearControls();
 
-      addButton("record", "record()", "Start Recording");
+      addButton("record", "record()", "Start Record");
       break;
 
     case "Record":

@@ -10,11 +10,6 @@ ReactDOM.createRoot(document.getElementById("speaking")).render(
   <>
     <NavTest />
     <SpeakingQuiz />
-  </>
-);
-
-ReactDOM.createRoot(document.getElementById("speaking-footer")).render(
-  <>
-    <Footer></Footer>
+    <Footer />
   </>
 );
