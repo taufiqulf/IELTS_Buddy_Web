@@ -14,9 +14,8 @@ To get started run `npm install && npm run dev`:
     npm install
     npm run dev
 
-How to fix regeneratorRuntime is not defined?
+How to fix regeneratorRuntime is not defined?:
 
-Solution
-npm install --save regenerator-runtime
+    npm install --save regenerator-runtime
 
 require import 'regenerator-runtime/runtime' at the top of the file that you're using async function
