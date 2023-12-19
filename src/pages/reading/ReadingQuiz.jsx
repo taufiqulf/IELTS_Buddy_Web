@@ -61,6 +61,7 @@ const ReadingQuiz = () => {
             <></>
           ) : (
             <>
+              <h1 className="text-center text-2xl font-bold py-5">Bring Back The Big Cats</h1>
               <div className="grid md:grid-cols-2 grid-cols-1 auto-cols-auto py-5 space-x-5 h-max md:text-lg text-base text-justify">
                 <p>
                   John Vesty says that the time for returning vanished native animals to Britain has arrived. Around 598 AD,
