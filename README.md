@@ -19,3 +19,7 @@ How to fix regeneratorRuntime is not defined?:
     npm install --save regenerator-runtime
 
 require import 'regenerator-runtime/runtime' at the top of the file that you're using async function
+
+    import 'regenerator-runtime/runtime'
+
+in this case, you have to add this code above on "node_modules\.vite\deps\react-speech-recognition.js" path file
