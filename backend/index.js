@@ -1,18 +1,30 @@
 #!/usr/bin/env node
 
-/**
- * Module dependencies.
- */
-
 const express = require('express');
 const app = express();
-const debug = require('debug')('bangkit-ielts-cloud:server');
 const path = require('path'); // Import the path module
-const router = require('./routes/router'); 
+const cors = require('cors');
+const firebase = require('firebase/app');
+require('firebase/auth');
+require('firebase/firestore');
 
+app.use(cors());
+app.use(express.json());
 /**
  * Get port from environment and store in Express.
  */
+
+// Set-up firebase
+// Firebase admin initialization should occur only once in the app lifecycle.
+const admin = require('firebase-admin');
+const serviceAccount = require('./ServiceAccountKey.json');
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    storageBucket: "englishbuddydb.appspot.com"
+  });
+
+  // Initialize Router
+  const router = require('./routes/router');
 
 const port = normalizePort(process.env.PORT || '5050');
 app.set('port', port);
@@ -21,11 +33,7 @@ app.set('port', port);
  * Point to React app build directory
  */
 
-app.use('/', router);
-
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../src', 'frontpage.html'));
-});
+app.use('/', router); // Use the router module
 
 /**
  * Normalize a port into a number, string, or false.
@@ -48,43 +56,9 @@ function normalizePort(val) {
 }
 
 /**
- * Event listener for HTTP server "error" event.
+ * Server setup and listen on the given port on all network interfaces.
  */
 
-function onError(error) {
-    if (error.syscall !== 'listen') {
-        throw error;
-    }
-
-    const bind = typeof port === 'string'
-        ? 'Pipe ' + port
-        : 'Port ' + port;
-
-    // handle specific listen errors with friendly messages
-    switch (error.code) {
-        case 'EACCES':
-            console.error(bind + ' requires elevated privileges');
-            process.exit(1);
-            break;
-        case 'EADDRINUSE':
-            console.error(bind + ' is already in use');
-            process.exit(1);
-            break;
-        default:
-            throw error;
-    }
-}
-
-/**
- * Event listener for HTTP server "listening" event.
- */
-
-function onListening() {
-    const addr = app.address();
-    const bind = typeof addr === 'string'
-        ? 'pipe ' + addr
-        : 'port ' + addr.port;
-    debug('Listening on ' + bind);
-}
-
-module.exports = app; // Export the Express app instance
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server is running on port ${port}`);
+});

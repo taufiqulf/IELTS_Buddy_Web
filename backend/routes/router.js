@@ -2,26 +2,28 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const { createProxyMiddleware } = require('http-proxy-middleware');
+const readingroute = require('./readingroutes');
+const listeningroute = require('./listeningroutes');
 
-// Serve the HTML front page
+// For blank API
+router.get('/api', (req, res) => {
+    res.json({ message: 'Welcome to the EnglishBuddy' });
+  });
+
+// For blank API redirect to homepage frontend
 router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../', 'frontpage.html'));
+    res.redirect('http://localhost:6050');
 });
 
-// Serve the static files for the dashboards
-router.use('/dashboards', express.static(path.join(__dirname, '../../build')));
+// Dashboard API endpoint
+router.get('/api/dashboard', (req, res) => {
+    res.json({ message: 'Welcome to the Dashboard API' });
+  });
 
-// Proxy requests to the React app
-router.use(
-    '/api',
-    createProxyMiddleware({
-        target: 'http://localhost:5050/dashboards/', // Replace with the URL of your React app
-        changeOrigin: true,
-    })
-);
+// Admin API endpoint, protected with Kinde authentication
+router.use('/api/reading', readingroute);
 
-router.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../', 'frontpage.html'));
-});
+// Admin API endpoint listening, protected with Kinde authentication
+router.use('/api/listening', listeningroute);
 
 module.exports = router;

@@ -1,0 +1,54 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: ./backend
+    image: asia-southeast1-docker.pkg.dev/fluent-grammar-408618/englishbuddydeployment/backend-eb:latest
+    ports:
+      - "5050:5050"
+    networks:
+      - app-network
+    env_file:
+      - .env
+
+  frontend:
+    build:
+      context: ./app/Homepage
+    image: asia-southeast1-docker.pkg.dev/fluent-grammar-408618/englishbuddydeployment/react-fe-homepage:latest
+    ports:
+      - "6050:6050"
+    networks:
+      - app-network
+    environment:
+      - REACT_APP_BACKEND_URL=http://backend:5050
+    env_file:
+      - .env
+
+  admin:
+    build:
+      context: ./app/Admin
+    image: asia-southeast1-docker.pkg.dev/fluent-grammar-408618/englishbuddydeployment/react-admin:latest
+    ports:
+      - "6060:6060"
+    networks:
+      - app-network
+    environment:
+      - REACT_APP_BACKEND_URL=http://backend:5050
+    env_file:
+      - .env
+
+  machinelearning:
+    build:
+      context: ./Deployment_ML
+    image: asia-southeast1-docker.pkg.dev/fluent-grammar-408618/englishbuddydeployment/fastapi-ml:latest
+    ports:
+      - "6090:6090"
+    networks:
+      - app-network
+    environment:
+      - REACT_APP_BACKEND_URL=http://backend:5050
+    env_file:
+      - .env
+
+networks:
+  app-network:

@@ -1,19 +1,27 @@
 {
-  "name": "backend",
+  "name": "backend-eb",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend for EnglishBuddy",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "CH2-PS305",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "firebase-admin": "^11.11.1",
-    "kafka": "^0.2.3"
+    "express-jwt": "^8.4.1",
+    "express-oauth2-jwt-bearer": "^1.6.0",
+    "firebase": "^10.7.1",
+    "firebase-admin": "^12.0.0",
+    "jwks-rsa": "^3.1.0",
+    "kafka": "^0.2.3",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   }
 }

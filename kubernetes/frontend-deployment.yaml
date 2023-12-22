@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: asia-southeast1-docker.pkg.dev/fluent-grammar-408618/englishbuddydeployment/react-fe-homepage:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 6050
+        env:
+          - name: REACT_APP_BACKEND_URL
+            value: "http://backend-service:5050"
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "500m"
+          limits:
+            memory: "1Gi"
+            cpu: "1000m"

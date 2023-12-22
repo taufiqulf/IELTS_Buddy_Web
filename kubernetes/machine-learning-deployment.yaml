@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: machine-learning-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: machinelearning
+  template:
+    metadata:
+      labels:
+        app: machinelearning
+    spec:
+      containers:
+      - name: machinelearning
+        image: asia-southeast1-docker.pkg.dev/fluent-grammar-408618/englishbuddydeployment/fastapi-ml:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 6090
+        env:
+          - name: REACT_APP_BACKEND_URL
+            value: "http://backend-service:5050"
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "1000m"
+          limits:
+            memory: "2Gi"
+            cpu: "2000m"

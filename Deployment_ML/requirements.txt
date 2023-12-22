@@ -1,0 +1,8 @@
+fastapi
+pydantic
+transformers
+tensorflow
+scikit-learn==1.2.2
+numpy
+uvicorn
+happytransformer

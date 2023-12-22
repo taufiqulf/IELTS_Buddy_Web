@@ -1,0 +1,42 @@
+export const quiz = [
+  {
+    question: "What did the discovery of animal bone say about the lynx?",
+    option1: "It has distinctive physical appearance",
+    option2: "The spread of farming is linked to its extinction",
+    option3: "It survived in Britain longer than the prediction",
+    option4: "Thousand years ago it disappeared from Britain",
+    ans: 4,
+  },
+  {
+    question: "What does the writer point out about the large predators?",
+    option1: "Biodiversity will increase by its presence",
+    option2: "It will create damage to the ecosystems",
+    option3: "Based on the environment, their behaviour might change",
+    option4: "Only in their native places they should be reintroduced",
+    ans: 1,
+  },
+  {
+    question: "What is suggested by the writer about British conservation?",
+    option1: "The target was missed to achieve",
+    option2: "The path has begin to change",
+    option3: "The misguided approach was held",
+    option4: "It targeted only the most widespread species",
+    ans: 3,
+  },
+  {
+    question: "Protecting the large are of sea from commercial fishing will end up in...",
+    option1: "Loss for the fishing industry",
+    option2: "Benefits for the fishing industry",
+    option3: "Opposition from the fishing industry",
+    option4: "Changes in techniques in fishing industry",
+    ans: 1,
+  },
+  {
+    question: "What is the difference between rewilding from other campaigns according to the writer?",
+    option1: "The message is appealing and positive.",
+    option2: "The objective is achievable",
+    option3: "Supporters are more involved",
+    option4: "It is based on the scientific principles",
+    ans: 3,
+  },
+];

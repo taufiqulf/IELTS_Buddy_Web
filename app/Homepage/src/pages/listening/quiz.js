@@ -1,0 +1,42 @@
+export const quiz = [
+  {
+    question: "What time was it in Tokyo, when Yuki telephoned Mrs. Grey?",
+    option1: "3.00 PM",
+    option2: "3.00 AM",
+    option3: "7 o'clock in the morning",
+    option4: "7 o'clock at night",
+    ans: 2,
+  },
+  {
+    question: "What time was it in London, when Yuki telephoned Mrs. Grey?",
+    option1: "3.00 PM",
+    option2: "3.00 AM",
+    option3: "7 o'clock in the morning",
+    option4: "7 o'clock at night",
+    ans: 4,
+  },
+  {
+    question: "Who told Yuki about the right time to call English people?",
+    option1: "Maths teacher",
+    option2: "Science teacher",
+    option3: "Homestay officer",
+    option4: "English teacher",
+    ans: 4,
+  },
+  {
+    question: "What do people usually eat in London?",
+    option1: "Sushi",
+    option2: "Fish & Chips",
+    option3: "Both A & B",
+    option4: "None of the above",
+    ans: 2,
+  },
+  {
+    question: "What do people usually eat in Tokyo?",
+    option1: "Sushi",
+    option2: "Fish & Chips",
+    option3: "Both A & B",
+    option4: "None of the above",
+    ans: 1,
+  },
+];
