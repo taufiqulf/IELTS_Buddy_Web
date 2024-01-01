@@ -6,7 +6,7 @@ const WritingQuiz = () => {
       <div className="max-w-screen w-full md:mx-10 mx-5 bg-primary text-secondary py-5 md:px-6 px-4 rounded-[35px]">
         <h1 className="text-center text-2xl font-bold py-5">Summarize This Information</h1>
         <div className="grid md:grid-cols-2 grid-cols-1 auto-cols-auto md:space-x-5 h-max md:text-xl text-lg text-justify mb-10 md:px-10 px-5">
-          <img className="pt-5 rounded" src="writing.jpg" alt="" />
+          <img className="pt-5 rounded" src="https://storage.googleapis.com/ebuddy-assets-ps305/writing-test.jpg" alt="" />
           <div>
             <p className="py-5 md:text-2xl text-xl">
               The bar chart here describes some changes about the percentage of people were born in Australia and who were
