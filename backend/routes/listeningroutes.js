@@ -15,7 +15,16 @@ const { v4: uuidv4 } = require('uuid');
 
 // Multer configuration to store the incoming file in memory
 const multerStorage = multer.memoryStorage();
-const upload = multer({ storage: multerStorage });
+const upload = multer({
+  storage: multerStorage,
+  limits: { fileSize: 10 * 1024 * 1024 },
+  fileFilter: (req, file, cb) => {
+    if (!file.mimetype.startsWith('audio/')) {
+      return cb(new Error('Invalid file type. Only audio files are allowed.'));
+    }
+    return cb(null, true);
+  }
+});
 
 const db = admin.firestore();
 const bucket = admin.storage().bucket();
@@ -82,7 +91,8 @@ router.get('/', checkJwt, (req, res) => {
       stream.end(req.file.buffer);
     } catch (error) {
       console.error('Error handling request:', error);
-      res.status(500).json({ error: error.message });
+      const statusCode = error.message?.includes('Invalid file type') ? 400 : 500;
+      res.status(statusCode).json({ error: error.message });
     }
   });
 
@@ -121,4 +131,3 @@ router.post('/listeningIndex', checkJwt, async (req, res) => {
 });
 
 module.exports = router;
-

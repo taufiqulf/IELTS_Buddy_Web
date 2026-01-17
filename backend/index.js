@@ -17,11 +17,28 @@ app.use(express.json());
 // Set-up firebase
 // Firebase admin initialization should occur only once in the app lifecycle.
 const admin = require('firebase-admin');
-const serviceAccount = require('./ServiceAccountKey.json');
-  admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    storageBucket: "englishbuddydb.appspot.com"
-  });
+const serviceAccountPath = process.env.FIREBASE_SERVICE_ACCOUNT_PATH;
+const serviceAccountJson = process.env.FIREBASE_SERVICE_ACCOUNT;
+let serviceAccount;
+
+if (serviceAccountJson) {
+  try {
+    serviceAccount = JSON.parse(serviceAccountJson);
+  } catch (error) {
+    throw new Error('Invalid FIREBASE_SERVICE_ACCOUNT JSON.');
+  }
+} else if (serviceAccountPath) {
+  serviceAccount = require(path.resolve(serviceAccountPath));
+} else {
+  throw new Error(
+    'Firebase service account not configured. Set FIREBASE_SERVICE_ACCOUNT or FIREBASE_SERVICE_ACCOUNT_PATH.'
+  );
+}
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  storageBucket: "englishbuddydb.appspot.com"
+});
 
   // Initialize Router
   const router = require('./routes/router');
