@@ -36,11 +36,12 @@ router.get('/', checkJwt, (req, res) => {
 router.post('/readingText', checkJwt, async (req, res) => {
     try {
         console.log('Received request:', req.body);
-        const newText = req.body;
+        const { Text } = req.body;
 
-        if (typeof newText !== 'object' || newText === null) {
-            return res.status(400).json({ error: "Invalid data format" });
+        if (!Text) {
+            return res.status(400).json({ error: "Invalid data format: Text is required" });
         }
+        const newText = { Text };
 
         // Add validation as needed
 
@@ -60,7 +61,8 @@ router.post('/readingText', checkJwt, async (req, res) => {
 // POST request handler for /api/reading
 router.post('/readingAnswer', checkJwt, async (req, res) => {
     try {
-        const newAnswer = req.body;
+        const { TextID, Question, Explanation, TypeFillText, Answer } = req.body;
+        const newAnswer = { TextID, Question, Explanation, TypeFillText, Answer };
 
         // Add validation as needed
 
@@ -79,7 +81,8 @@ router.post('/readingAnswer', checkJwt, async (req, res) => {
 // Post request to create readingIndex where it contain AnswerID and TextID
 router.post('/readingIndex', checkJwt, async (req, res) => {
     try {
-        const newIndex = req.body;
+        const { TextID, AnswerID } = req.body;
+        const newIndex = { TextID, AnswerID };
 
         // Add validation as needed
 

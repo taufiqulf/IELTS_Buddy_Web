@@ -32,4 +32,5 @@ COPY --from=build /app/build /app
 EXPOSE 6060
 
 # Serve the static files using `serve`
+USER node
 CMD ["serve", "-s", ".", "-l", "6060"]

@@ -14,6 +14,9 @@ spec:
     spec:
       containers:
       - name: frontend
+        securityContext:
+          runAsNonRoot: true
+          allowPrivilegeEscalation: false
         image: asia-southeast1-docker.pkg.dev/fluent-grammar-408618/englishbuddydeployment/react-fe-homepage:latest
         imagePullPolicy: Always
         ports:

@@ -21,4 +21,5 @@ COPY . .
 EXPOSE 5050
 
 # Run Node
+USER node
 CMD [ "node", "index.js" ]

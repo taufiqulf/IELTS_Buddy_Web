@@ -32,4 +32,5 @@ RUN npm install -g vite
 EXPOSE 6050
 
 # Start the server using the same command as npm run preview
+USER node
 CMD ["vite", "preview", "--port", "6050"]

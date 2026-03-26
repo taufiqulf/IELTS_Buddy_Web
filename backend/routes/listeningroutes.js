@@ -99,7 +99,8 @@ router.get('/', checkJwt, (req, res) => {
 // POST request handler for /api/listening
 router.post('/listeningAnswer', checkJwt, async (req, res) => {
     try {
-        const newAnswer = req.body;
+        const { Question, Answer, Explanation, TypeFillText } = req.body;
+        const newAnswer = { Question, Answer, Explanation, TypeFillText };
 
         // Add validation as needed
 
